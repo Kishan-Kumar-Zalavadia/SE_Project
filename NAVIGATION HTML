@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"  dir="ltr">
+<head>
+     <meta charset="utf-8">
+     <title>Responsive Navbar</title>
+     <meta name="viewport" content="width=device-width,intial-
+      scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/a076d05399.js" ></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+$(document).ready(function(){
+  $('#icon').click(function(){
+   $('ul').toggleClass('show');
+  });
+});
+</head>
+<body>
+     <nav>
+       <label class="logo">StudentTRADE</label>
+        <ul>
+         <li><a  class="active" href="#">HOME</a></li>
+         <li><a href="#">About</a></li>		
+	 <li><a href="#">services</a></li>
+	 <li><a href="#">Contact</a></li>
+ 	 <li><a href="#">Feedback</a></li>
+        </ul>
+       <label id="icon">
+        <i class="fas fa-bars"></i>
+       </label>
+      </nav>
+      <section></section>
+       
+ </body>
+</html>
