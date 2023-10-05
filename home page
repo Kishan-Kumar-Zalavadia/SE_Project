@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student trading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">STC</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                         <li><a href="#">HOME</a</li>
+                         <li><a href="#">ABOUT</a</li>
+                         <li><a href="#">SERVICE</a</li>
+                         <li><a href="#">DESIGN</a</li>
+                         <li><a href="#">CONTACT</a</li>       
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input  class="srch" type="search" name="" placeholder="Type to text">
+                    <a href="#"><button class="button">search</button></a>
+                </div>
+
+                <div class="content">
+                    <h1>Trading &<br><span>items</span> <br>for Student</h1>
+                    <p class="par"> A dynamic online marketplace called Student Trading Connection was created to enable smooth transactions between student buyers and sellers. It provides a customized user experience to address the unique demands of its consumers.</p>
+                       <button class="cn"><a href="#">JOIN US</a></button> 
+                </div>
+                <div class="form">
+                    <h2>login here</h2>
+                    <input type="email" name="email" placeholder="enter email here">
+                    <input type="password" name="" placeholder="enter passwordhere">
+                    <button class="btn"><a href="#">login</a></button>
+
+
+                    <p class="link">Don't have a account</p><br>
+                    <a href="#">sign up here</a>
+                    <p class="liw">log in with</p>
+                </div>
+            </div>
+    </div>    
+</body>
+</html>
