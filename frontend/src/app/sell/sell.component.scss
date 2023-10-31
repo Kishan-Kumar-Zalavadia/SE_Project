@@ -265,3 +265,9 @@ button[type="submit"]:hover {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay background */
   z-index: 999; /* Set a z-index slightly lower than the popup to cover the page */
 }
+
+/* Styling for product image */
+.product-card img {
+  max-width: 100px; 
+  margin-right: 10px;
+}

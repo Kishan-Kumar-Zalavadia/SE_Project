@@ -3,6 +3,7 @@
     <h1>Requested for In-Person Inspection:</h1>
     <div *ngFor="let product of inspectionRequestedProducts">
       <div class="product-card">
+        <img [src]=product.imageUrl alt="{{ product.title }}" />
         <h2>{{ product.title }}</h2>
         <p>Price: ${{ product.price }}</p>
           <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
@@ -15,6 +16,7 @@
     <h1>In-person Request Approved:</h1>
     <div *ngFor="let product of inspectiononRequestedApprovedProducts">
       <div class="product-card">
+        <img [src]=product.imageUrl alt="{{ product.title }}" />
         <h2>{{ product.title }}</h2>
         <p>Price: ${{ product.price }}</p>
         <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
@@ -27,6 +29,7 @@
     <h1>Products Ordered:</h1>
     <div *ngFor="let product of purchasedProducts">
       <div class="product-card">
+        <img [src]=product.imageUrl alt="{{ product.title }}" />
         <h2>{{ product.title }}</h2>
         <p>Price: ${{ product.price }}</p>
         <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
@@ -39,6 +42,7 @@
     <h1>Group Purchased Products:</h1>
     <div *ngFor="let product of groupPurchasedProducts">
       <div class="product-card">
+        <img [src]=product.imageUrl alt="{{ product.title }}" />
         <h2>{{ product.title }}</h2>
         <p>Price: ${{ product.price }}</p>
         <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
