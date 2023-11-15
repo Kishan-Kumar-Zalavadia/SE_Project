@@ -1,1 +1,150 @@
-<p>all-products works!</p>
+<div class="main-container">
+  <h2>All Products</h2>
+
+  <div *ngIf="products.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.productID }}</td>
+          <td>{{ product.title }}</td>
+          <td>{{ product.description }}</td>
+          <td>${{ product.price }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.status }}</td>
+          <td>
+            <button (click)="editProduct(product)">Edit</button>
+            <button (click)="deleteProduct(product)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- *----------------------------------------------------------------------------------------- -->
+<!-- * Popup to edit the Product -->
+<div class="overlay" *ngIf="showPopup"></div>
+<div class="popup" *ngIf="showPopup">
+  <!-- Your popup content goes here -->
+  <div class="popup-container">
+    <div class="popup-content">
+      <h2>Edit Product</h2>
+
+      <form (ngSubmit)="updateProduct()">
+        <div class="form-group">
+          <label for="editedTitle">Title:</label>
+          <input
+            type="text"
+            id="editedTitle"
+            [(ngModel)]="editedProduct.title"
+            name="editedTitle"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedDescription">Description:</label>
+          <textarea
+            id="editedDescription"
+            [(ngModel)]="editedProduct.description"
+            name="editedDescription"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="editedPrice">Price:</label>
+          <input
+            type="number"
+            id="editedPrice"
+            [(ngModel)]="editedProduct.price"
+            name="editedPrice"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedCategory">Category:</label>
+          <input
+            type="text"
+            id="editedCategory"
+            [(ngModel)]="editedProduct.category"
+            name="editedCategory"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedIsGroupPurchase">Is Group Purchase:</label>
+          <select
+            id="editedIsGroupPurchase"
+            [(ngModel)]="editedProduct.isGroupPurchase"
+            name="editedIsGroupPurchase"
+          >
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+
+        <!-- Additional fields -->
+        <div class="form-group">
+          <label for="editedSellerID">Seller ID:</label>
+          <input
+            type="number"
+            id="editedSellerID"
+            [(ngModel)]="editedProduct.sellerID"
+            name="editedSellerID"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedBuyerID">Buyer ID:</label>
+          <input
+            type="number"
+            id="editedBuyerID"
+            [(ngModel)]="editedProduct.buyerID"
+            name="editedBuyerID"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedStatus">Status:</label>
+          <input
+            type="number"
+            id="editedStatus"
+            [(ngModel)]="editedProduct.status"
+            name="editedStatus"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editedImageUrl">Image URL:</label>
+          <input
+            type="text"
+            id="editedImageUrl"
+            [(ngModel)]="editedProduct.imageUrl"
+            name="editedImageUrl"
+            required
+          />
+        </div>
+
+        <button type="submit">Save Changes</button>
+      </form>
+
+      <button (click)="closePopup()">Cancel</button>
+    </div>
+  </div>
+</div>

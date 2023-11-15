@@ -55,5 +55,10 @@ public class ProductService {
     public List<Product> fetchGroupPurchaseProducts(int userID) {
         return productRepository.findByIsGroupPurchaseAndSellerID(1,userID);
     }
+
+    // ----------------------------------------------------------------------------------------
+    // For Admin
+
+
 }
 

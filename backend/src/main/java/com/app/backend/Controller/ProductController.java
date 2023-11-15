@@ -143,4 +143,9 @@ public class ProductController {
     public List<Product> getGroupPurchaseProducts(@PathVariable int userID){
         return productService.fetchGroupPurchaseProducts(userID);
     }
+
+    // ----------------------------------------------------------------------------------------
+    // For Admin
+
+    
 }
