@@ -26,8 +26,8 @@
           <td>{{ product.description }}</td>
           <td>${{ product.price }}</td>
           <td>{{ product.category }}</td>
-          <td>{{ product.status }}</td>
-          <td>{{ product.isGroupPurchase }}</td>
+          <td>{{ getStatusLabel(product.status) }}</td>
+          <td>{{ getGroupPurchasesLabel(product.isGroupPurchase) }}</td>
           <td>
             <button (click)="editProduct(product)">Edit</button>
             <button (click)="deleteProduct(product)">Delete</button>

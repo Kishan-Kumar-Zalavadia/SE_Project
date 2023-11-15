@@ -30,6 +30,29 @@ export class AllProductsComponent {
     );
   }
 
+  // In your component class
+  getStatusLabel(status: number): string {
+    switch (status) {
+      case 0:
+        return "Unsold";
+      case 1:
+        return "Inspection Request";
+      case 2:
+        return "In-person Request Approved";
+      case 3:
+        return "Sold";
+      default:
+        return "Unknown Status";
+    }
+  }
+
+  getGroupPurchasesLabel(group: number): string {
+    switch(group){
+      case 1: return 'Yes';
+      default: return 'No';
+    }
+  }
+
   // * --------------------------------------------------------------------------------------------------------------------------------
   // * Delete Product Confirmation
   deleteProduct(product: Product) {
