@@ -37,8 +37,30 @@ public class UserService {
 
     public User increaseBonusPoints(int userId, int n) {
         User user = repo.findById(userId).orElseThrow(null);
-        user.setBonusPoints(user.getBonusPoints() + n);
+        int currentBonusPoints = user.getBonusPoints();
+        int updatedBonusPoints = currentBonusPoints + n;
+
+        // Update bonus points and profile level
+        user.setBonusPoints(updatedBonusPoints);
+        updateProfileLevel(user);
+
         repo.save(user);
         return user;
+    }
+
+    private void updateProfileLevel(User user) {
+        int bonusPoints = user.getBonusPoints();
+
+        if (bonusPoints < 50) {
+            user.setProfileLevel("Bronze");
+        } else if (bonusPoints < 100) {
+            user.setProfileLevel("Silver");
+        } else if (bonusPoints < 150) {
+            user.setProfileLevel("Gold");
+        } else if (bonusPoints < 200) {
+            user.setProfileLevel("Platinum");
+        } else if (bonusPoints < 250) {
+            user.setProfileLevel("Diamond");
+        } // You can add more conditions as needed
     }
 }

@@ -193,6 +193,25 @@ export class SellComponent {
         console.log("Error updating product status: " + error);
       }
     );
+
+
+    // this.userService.increaseBonusPoints(this.user.id, 5).subscribe(
+    //   (response) => {
+    //     console.log("Bonus points increased successfully:", response);
+    //   },
+    //   (error) => {
+    //     console.error("Error increasing bonus points:", error);
+    //   }
+    // );
+
+    // this.userService.increaseBonusPoints(this.product.buyerID, 5).subscribe(
+    //   (response) => {
+    //     console.log("Bonus points increased successfully:", response);
+    //   },
+    //   (error) => {
+    //     console.error("Error increasing bonus points:", error);
+    //   }
+    // );
   }
 
   // --------------------------------------------------------------------------------------------------------------------------------

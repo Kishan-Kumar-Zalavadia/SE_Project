@@ -1,9 +1,8 @@
 package com.app.backend.Controller;
 
 import com.app.backend.Entity.Product;
-import com.app.backend.Entity.User;
-import com.app.backend.Repository.ProductRepository;
 import com.app.backend.Service.ProductService;
+import com.app.backend.Service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,10 +17,12 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
+    private final UserService userService;
 
     @Autowired
-    public ProductController(ProductService productService) {
+    public ProductController(ProductService productService, UserService userService) {
         this.productService = productService;
+        this.userService = userService;
     }
 
     // Add Product
@@ -104,6 +105,9 @@ public class ProductController {
 
             // Save the updated product
             productService.saveProduct(product);
+
+            userService.increaseBonusPoints(userID,5);
+            userService.increaseBonusPoints(product.getSellerID(),10);
 
             return new ResponseEntity<>("Product status and buyerID updated successfully", HttpStatus.OK);
         }

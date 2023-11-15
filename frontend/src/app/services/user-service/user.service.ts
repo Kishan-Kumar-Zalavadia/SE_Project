@@ -33,9 +33,18 @@ export class UserService {
     return this._http.get<any>(url);
   }
 
-  // Get all the users buying a group product
+  //* Get all the users buying a group product
   fetchUsersByProductForGroupPurchase(product_id: number): Observable<User[]> {
     const url = `http://localhost:9292/users/getUsersByProductGroupPurchases/${product_id}`;
     return this._http.get<User[]>(url);
+  }
+
+  //* Add bounus points
+  increaseBonusPoints(userId: number, n: number): Observable<any> {
+    const url = `http://localhost:9292`;
+    return this._http.patch(
+      `${url}/users/${userId}/increaseBonus`,
+      n
+    );
   }
 }

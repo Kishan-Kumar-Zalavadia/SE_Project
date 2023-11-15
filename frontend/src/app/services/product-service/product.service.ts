@@ -76,7 +76,7 @@ export class ProductService {
   }
 
   // * Update product status and buyerID*
-  public updateProductStatusAndBuyerID(
+  public updateProductStatusAndBuyerID( 
     userID: number,
     productID: number,
     status: number
