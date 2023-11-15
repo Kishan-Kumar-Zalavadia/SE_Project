@@ -68,4 +68,9 @@ public class UserController {
     public List<User> fetchUsersByProductForGroupPurchase(@PathVariable int product_id) {
         return service.findUsersByProductForGroupPurchase(product_id);
     }
+
+    @PatchMapping("/{userId}/increaseBonus")
+    public User increaseBonusPoints(@PathVariable int userId, @RequestBody int n) {
+        return service.increaseBonusPoints(userId, n);
     }
+}

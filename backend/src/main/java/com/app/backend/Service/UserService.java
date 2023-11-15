@@ -34,4 +34,11 @@ public class UserService {
     public List<User> findUsersByProductForGroupPurchase(int product_id) {
         return repo.getUsersByProductForGroupPurchase(product_id);
     }
+
+    public User increaseBonusPoints(int userId, int n) {
+        User user = repo.findById(userId).orElseThrow(null);
+        user.setBonusPoints(user.getBonusPoints() + n);
+        repo.save(user);
+        return user;
+    }
 }
