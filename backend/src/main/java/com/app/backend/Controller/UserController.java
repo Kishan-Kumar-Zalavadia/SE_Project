@@ -73,4 +73,12 @@ public class UserController {
     public User increaseBonusPoints(@PathVariable int userId, @RequestBody int n) {
         return service.increaseBonusPoints(userId, n);
     }
+
+
+//    ----------------------------------------------------------------------------------------
+//    For ADMIN
+    @PutMapping("/update/{userId}")
+    public User updateUserDetails(@PathVariable int userId, @RequestBody User updatedUser) {
+        return service.updateUserDetails(userId, updatedUser);
+    }
 }

@@ -2,6 +2,7 @@ package com.app.backend.Service;
 
 import com.app.backend.Entity.User;
 import com.app.backend.Repository.UserRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -62,5 +63,25 @@ public class UserService {
         } else if (bonusPoints < 250) {
             user.setProfileLevel("Diamond");
         } // You can add more conditions as needed
+    }
+
+
+//    ----------------------------------------------------------------------------------------
+//    For Amin
+    public User updateUserDetails(int userId, User updatedUser) {
+        User existingUser = repo.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        // Update all fields with the values from updatedUser
+        existingUser.setEmailId(updatedUser.getEmailId());
+        existingUser.setUserName(updatedUser.getUserName());
+        existingUser.setPassword(updatedUser.getPassword());
+        existingUser.setProfileLevel(updatedUser.getProfileLevel());
+        existingUser.setAddress(updatedUser.getAddress());
+        existingUser.setPhone(updatedUser.getPhone());
+        existingUser.setBonusPoints(updatedUser.getBonusPoints());
+        existingUser.setUserType(updatedUser.getUserType());
+
+        return repo.save(existingUser);
     }
 }

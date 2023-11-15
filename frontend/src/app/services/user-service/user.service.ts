@@ -42,9 +42,21 @@ export class UserService {
   //* Add bounus points
   increaseBonusPoints(userId: number, n: number): Observable<any> {
     const url = `http://localhost:9292`;
-    return this._http.patch(
-      `${url}/users/${userId}/increaseBonus`,
-      n
-    );
+    return this._http.patch(`${url}/users/${userId}/increaseBonus`, n);
+  }
+
+  //* ------------------------------------------------------------------------------------------------
+  // * For ADMIN ONLY
+  private apiUrl = "http://localhost:9292/users";
+
+  // Get all users
+  getAllUsers(): Observable<User[]> {
+    return this._http.get<User[]>(this.apiUrl);
+  }
+
+  // Update user
+  updateUserDetails(updatedUser: User): Observable<User> {
+    const url = `${this.apiUrl}/update/${updatedUser.id}`;
+    return this._http.put<User>(url, updatedUser);
   }
 }
