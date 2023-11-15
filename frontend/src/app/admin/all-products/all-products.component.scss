@@ -1,82 +1,47 @@
-.main-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-
-  h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f4f4f4;
-      color: #555;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    tr:hover {
-      background-color: #e0e0e0;
-    }
-
-    button {
-      padding: 8px 12px; /* Adjusted button size */
-      margin-right: 8px; /* Adjusted button margin */
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &.edit {
-        background-color: #4CAF50; /* Green color */
-        color: #fff;
-
-        &:hover {
-          background-color: #45a049; /* Darker green on hover */
-        }
-      }
-
-      &.delete {
-        background-color: #f44336; /* Red color */
-        color: #fff;
-
-        &:hover {
-          background-color: #d32f2f; /* Darker red on hover */
-        }
-      }
-    }
-  }
+/* all-users.component.css */
+h2 {
+  color: #3498db;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
 
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #2081c3;
+}
 
 
 /* Form Styles */
@@ -97,7 +62,7 @@
 }
 
 .successMsg {
-  color: #5bc0de; /* Light blue color for success message */
+  color: #5bc0de;
   font-weight: bold;
 }
 
@@ -105,7 +70,7 @@
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #5bc0de; /* Light blue color for labels */
+  color: #5bc0de;
 }
 
 .form-group input[type="text"],
@@ -125,7 +90,7 @@ button[type="submit"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff; /* Blue color for the button */
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -134,7 +99,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 /* Product List Styles */
@@ -153,16 +118,15 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-.product-card {
-  .groupPurchasesMsg {
-    color: green;
-    font-size: 10px;
-  }
-  p {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #888;
-  }
+.product-card .groupPurchasesMsg {
+  color: green;
+  font-size: 10px;
+}
+
+.product-card p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #888;
 }
 
 .product-card h2 {
@@ -174,8 +138,6 @@ button[type="submit"]:hover {
   font-size: 16px;
 }
 
-
-/* Dropdown Styles */
 .form-group select {
   width: 100%;
   padding: 10px;
@@ -188,21 +150,18 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-/* Styling the dropdown options */
 .form-group select option {
   background-color: #333;
   color: #fff;
 }
 
-/* Styling the dropdown arrow */
 .form-group select::-ms-expand,
 .form-group select::-ms-expand {
-  display: none; /* Hide the default arrow in IE */
+  display: none;
 }
 
-/* Styling the dropdown on hover */
 .form-group select:hover {
-  background-color: #444; /* Darker background on hover */
+  background-color: #444;
 }
 
 // -----------------------------------------------
