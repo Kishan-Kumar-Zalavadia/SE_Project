@@ -11,6 +11,9 @@ import { SellerDetailsComponent } from './seller-details/seller-details.componen
 import { CartComponent } from './cart/cart.component';
 import { BuyerDetailsComponent } from './buyer-details/buyer-details.component';
 import { GroupPurchasedBuyerComponent } from './group-purchased-buyer/group-purchased-buyer.component';
+import { AllProductsComponent } from './admin/all-products/all-products.component';
+import { AllUsersComponent } from './admin/all-users/all-users.component';
+import { AllGroupProductsComponent } from './admin/all-group-products/all-group-products.component';
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -24,12 +27,18 @@ const routes: Routes = [
       { path: "buy", component: BuyComponent },
       { path: "profile", component: ProfileComponent },
       { path: "cart", component: CartComponent },
+      { path: "allUsers", component: AllUsersComponent },
+      { path: "allProducts", component: AllProductsComponent },
+      { path: "allGroupProducts", component: AllGroupProductsComponent },
     ],
   },
   { path: "buy/:id", component: ProductDetailsComponent },
   { path: "sellerDetails/:id", component: SellerDetailsComponent },
   { path: "buyerDetails/:id", component: BuyerDetailsComponent },
-  { path: "GroupPurchasedBuyerComponent", component: GroupPurchasedBuyerComponent }, //
+  {
+    path: "GroupPurchasedBuyerComponent",
+    component: GroupPurchasedBuyerComponent,
+  },
 ];
 
 @NgModule({

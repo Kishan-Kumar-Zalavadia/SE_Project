@@ -25,7 +25,11 @@ export class LoginComponent implements OnInit {
       (data) => {
         console.log(data);
         this._userService.setUser(data);
-        this._router.navigate(['/home/buy']);
+        if(this.user.emailId == 'admin@gmail.com') {
+          this._router.navigate(['/home/allUsers']);
+        }
+        else
+          this._router.navigate(['/home/buy']);
         // this._router.navigate(["/home"], {
         //   skipLocationChange: true,
         // });

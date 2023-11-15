@@ -1,12 +1,19 @@
 <nav class="navbar">
   <div class="navbar-left">
-    <a routerLink="/home/buy">STC</a>
+    <a *ngIf='user.emailId!="admin@gmail.com"' routerLink="/home/buy">STC</a>
+    <a *ngIf='user.emailId=="admin@gmail.com"' routerLink="/home/allUsers">STC</a>
   </div>
-  <div class="navbar-right">
+  <div *ngIf='user.emailId!="admin@gmail.com"' class="navbar-right">
     <a routerLink="buy" routerLinkActive="selected" class="list-item">Buy</a>
     <a routerLink="sell" routerLinkActive="selected" class="list-item">Sell</a>
     <a routerLink="profile" routerLinkActive="selected" class="list-item">{{user.userName}}</a>
     <a routerLink="cart" routerLinkActive="selected" class="list-item">cart</a>
+    <a routerLink="" class="list-item">Log Out</a>
+  </div>
+  <div *ngIf='user.emailId=="admin@gmail.com"' class="navbar-right">
+    <a routerLink="allUsers" routerLinkActive="selected" class="list-item">Users</a>
+    <a routerLink="allProducts" routerLinkActive="selected" class="list-item">Products</a>
+    <a routerLink="allGroupProducts" routerLinkActive="selected" class="list-item">Group Products</a>
     <a routerLink="" class="list-item">Log Out</a>
   </div>
 </nav>
