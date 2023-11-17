@@ -30,7 +30,7 @@
           <td>{{ getGroupPurchasesLabel(product.isGroupPurchase) }}</td>
           <td>
             <button (click)="editProduct(product)">Edit</button>
-            <button (click)="deleteProduct(product)">Delete</button>
+            <button class="delete" (click)="deleteProduct(product)">Delete</button>
           </td>
         </tr>
       </tbody>
