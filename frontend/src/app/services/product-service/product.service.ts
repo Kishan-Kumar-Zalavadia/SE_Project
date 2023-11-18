@@ -7,6 +7,8 @@ import { Product } from "src/app/models/product/product";
   providedIn: "root",
 })
 export class ProductService {
+  BASE_URL = "http://localhost:9292";
+
   product = new Product();
 
   setProduct(product: Product) {
@@ -17,8 +19,6 @@ export class ProductService {
   }
 
   constructor(private http: HttpClient) {}
-
-  BASE_URL = "http://localhost:9292";
 
   // * Get all products
   public getProductsFromRemote(): Observable<any> {
@@ -76,7 +76,7 @@ export class ProductService {
   }
 
   // * Update product status and buyerID*
-  public updateProductStatusAndBuyerID( 
+  public updateProductStatusAndBuyerID(
     userID: number,
     productID: number,
     status: number
@@ -128,11 +128,10 @@ export class ProductService {
     this.groupPurchaseProductID = productID;
   }
 
-  getGroupPurchaseProductsByUser(){
+  getGroupPurchaseProductsByUser() {
     return this.groupPurchaseProductID;
   }
 
-
   // * ------------------------------------------------------------------------------------------------
-  // * 
+  // *
 }
