@@ -74,14 +74,18 @@
     <h2>For sale</h2>
     <div *ngFor="let product of availableProducts" class="product-card">
       <h2>{{ product.title }}</h2>
-      <img [src]=product.imageUrl alt="{{ product.title }}" />
+      <img [src]="product.imageUrl" alt="{{ product.title }}" />
       <p>Price: ${{ product.price }}</p>
-      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
+      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase != 0">
+        Group Purchase
+      </p>
       <button class="btn edit" (click)="editProduct(product)">Edit</button>
       <button class="btn delete" (click)="deleteProduct(product)">
         Delete
       </button>
-      <button class="btn edit" (click)="viewBuyersInGroupProduct(product)">View Buyers</button>
+      <button class="btn edit" (click)="viewBuyersInGroupProduct(product)">
+        View Buyers
+      </button>
     </div>
   </div>
 
@@ -92,11 +96,17 @@
       class="product-card"
     >
       <h2>{{ product.title }}</h2>
-      <img [src]=product.imageUrl alt="{{ product.title }}" />
+      <img [src]="product.imageUrl" alt="{{ product.title }}" />
       <p>Price: ${{ product.price }}</p>
-      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
-      <button class="btn accept" (click)="acceptInPersonRequest(product)">Accept</button>
-      <button class="btn edit" (click)="viewBuyerDetails(product)">Buyer</button>
+      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase != 0">
+        Group Purchase
+      </p>
+      <button class="btn accept" (click)="acceptInPersonRequest(product)">
+        Accept
+      </button>
+      <button class="btn edit" (click)="viewBuyerDetails(product)">
+        Buyer
+      </button>
     </div>
   </div>
 
@@ -107,9 +117,11 @@
       class="product-card"
     >
       <h2>{{ product.title }}</h2>
-      <img [src]=product.imageUrl alt="{{ product.title }}" />
+      <img [src]="product.imageUrl" alt="{{ product.title }}" />
       <p>Price: ${{ product.price }}</p>
-      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
+      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase != 0">
+        Group Purchase
+      </p>
     </div>
   </div>
 
@@ -117,11 +129,16 @@
     <h2>Sold Products</h2>
     <div *ngFor="let product of soldProducts" class="product-card">
       <h2>{{ product.title }}</h2>
-      <img [src]=product.imageUrl alt="{{ product.title }}" />
+      <img [src]="product.imageUrl" alt="{{ product.title }}" />
       <p>Price: ${{ product.price }}</p>
-      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase!=0">Group Purchase</p>
+      <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase != 0">
+        Group Purchase
+      </p>
       <button class="btn delete" (click)="deleteProduct(product)">
         Delete
+      </button>
+      <button class="btn edit" (click)="viewBuyerDetails(product)">
+        Buyer
       </button>
     </div>
   </div>
