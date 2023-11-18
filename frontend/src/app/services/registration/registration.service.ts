@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: "root",
 })
 export class RegistrationService {
-  
-  private baseUrl = "http://localhost:9292";
+  // private baseUrl = "http://localhost:9292";
+  private baseUrl = "http://loud-egg-production.up.railway.app";
 
   constructor(private _http: HttpClient) {}
 

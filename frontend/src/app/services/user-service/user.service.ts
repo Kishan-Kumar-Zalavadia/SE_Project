@@ -7,7 +7,8 @@ import { User } from "src/app/models/user/user";
   providedIn: "root",
 })
 export class UserService {
-  private baseUrl = "http://localhost:9292";
+  // private baseUrl = "http://localhost:9292";
+  private baseUrl = "loud-egg-production.up.railway.app";
 
   user = new User();
 

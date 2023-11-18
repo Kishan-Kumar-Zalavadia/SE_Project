@@ -7,7 +7,8 @@ import { Product } from "src/app/models/product/product";
   providedIn: "root",
 })
 export class ProductService {
-  BASE_URL = "http://localhost:9292";
+  // BASE_URL = "http://localhost:9292";
+  BASE_URL = "loud-egg-production.up.railway.app";
 
   product = new Product();
 
