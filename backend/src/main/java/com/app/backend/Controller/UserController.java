@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "http://loud-egg-production.up.railway.app")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
 @RequestMapping("/users")
 public class UserController {
 
