@@ -122,6 +122,9 @@
       <p class="groupPurchasesMsg" *ngIf="product.isGroupPurchase != 0">
         Group Purchase
       </p>
+      <button class="btn edit" (click)="viewBuyerDetails(product)">
+        Buyer
+      </button>
     </div>
   </div>
 
