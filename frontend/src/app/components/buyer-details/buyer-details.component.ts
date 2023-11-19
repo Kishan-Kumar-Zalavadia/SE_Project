@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { User } from '../models/user/user';
-import { Product } from '../models/product/product';
-import { Router } from '@angular/router';
-import { ProductService } from '../services/product-service/product.service';
-import { UserService } from '../services/user-service/user.service';
+import { Component } from "@angular/core";
+import { User } from "../../models/user/user";
+import { Product } from "../../models/product/product";
+import { Router } from "@angular/router";
+import { ProductService } from "../../services/product-service/product.service";
+import { UserService } from "../../services/user-service/user.service";
 
 @Component({
   selector: "app-buyer-details",

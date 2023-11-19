@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import { ProductService } from "../services/product-service/product.service";
+import { ProductService } from "../../services/product-service/product.service";
 import { Router } from "@angular/router";
-import { Product } from "../models/product/product";
-import { User } from "../models/user/user";
-import { UserService } from "../services/user-service/user.service";
+import { Product } from "../../models/product/product";
+import { User } from "../../models/user/user";
+import { UserService } from "../../services/user-service/user.service";
 
 @Component({
   selector: "app-buy",

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../services/user-service/user.service';
-import { User } from '../models/user/user';
-import { ProductService } from '../services/product-service/product.service';
-import { Product } from '../models/product/product';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { UserService } from "../../services/user-service/user.service";
+import { User } from "../../models/user/user";
+import { ProductService } from "../../services/product-service/product.service";
+import { Product } from "../../models/product/product";
 
 @Component({
   selector: "app-seller-details",
@@ -26,8 +26,8 @@ export class SellerDetailsComponent {
     }
   }
 
-  // * Back button 
-  goToProductDetailsComponent(){
+  // * Back button
+  goToProductDetailsComponent() {
     this._router.navigate(["/buy/{product.id}"]);
   }
 

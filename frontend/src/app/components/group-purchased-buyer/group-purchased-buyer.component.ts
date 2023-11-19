@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { User } from '../models/user/user';
-import { UserService } from '../services/user-service/user.service';
-import { ProductService } from '../services/product-service/product.service';
-import { Router } from '@angular/router';
+import { Component } from "@angular/core";
+import { User } from "../../models/user/user";
+import { UserService } from "../../services/user-service/user.service";
+import { ProductService } from "../../services/product-service/product.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-group-purchased-buyer",
@@ -16,8 +16,7 @@ export class GroupPurchasedBuyerComponent {
     private userService: UserService,
     private productService: ProductService,
     private _router: Router
-  ) {
-  }
+  ) {}
   productID!: number;
 
   ngOnInit(): void {

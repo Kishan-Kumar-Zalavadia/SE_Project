@@ -4,12 +4,12 @@ import {
   ElementRef,
   ViewChild,
 } from "@angular/core";
-import { RegistrationService } from "../services/registration/registration.service";
+import { RegistrationService } from "../../services/registration/registration.service";
 import { Router } from "@angular/router";
-import { ProductService } from "../services/product-service/product.service";
-import { Product } from "../models/product/product";
-import { UserService } from "../services/user-service/user.service";
-import { User } from "../models/user/user";
+import { ProductService } from "../../services/product-service/product.service";
+import { Product } from "../../models/product/product";
+import { UserService } from "../../services/user-service/user.service";
+import { User } from "../../models/user/user";
 import { MatDialog } from "@angular/material/dialog";
 import "bootstrap/js/dist/modal"; // Import Bootstrap's modal module
 import { NgForm } from "@angular/forms";
@@ -193,7 +193,6 @@ export class SellComponent {
         console.log("Error updating product status: " + error);
       }
     );
-
 
     // this.userService.increaseBonusPoints(this.user.id, 5).subscribe(
     //   (response) => {

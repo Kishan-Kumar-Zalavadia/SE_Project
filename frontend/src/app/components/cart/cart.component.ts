@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
-import { ProductService } from "../services/product-service/product.service";
+import { ProductService } from "../../services/product-service/product.service";
 import { Router } from "@angular/router";
-import { Product } from "../models/product/product";
+import { Product } from "../../models/product/product";
 import { data } from "jquery";
-import { UserService } from "../services/user-service/user.service";
-import { User } from "../models/user/user";
+import { UserService } from "../../services/user-service/user.service";
+import { User } from "../../models/user/user";
 
 @Component({
   selector: "app-cart",

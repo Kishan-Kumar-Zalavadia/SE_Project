@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
 import { Route, Router } from "@angular/router";
-import { ProductService } from "../services/product-service/product.service";
-import { Product } from "../models/product/product";
-import { UserService } from "../services/user-service/user.service";
-import { User } from "../models/user/user";
+import { ProductService } from "../../services/product-service/product.service";
+import { Product } from "../../models/product/product";
+import { UserService } from "../../services/user-service/user.service";
+import { User } from "../../models/user/user";
 
 @Component({
   selector: "app-product-details",
@@ -111,7 +111,11 @@ export class ProductDetailsComponent {
 
   // * Buy Product in Group Logic
   buyProductInGroupLogic(product: Product) {
-    console.log("Product ",this.product.title," purchase in group by - "+ this.user.userName);
+    console.log(
+      "Product ",
+      this.product.title,
+      " purchase in group by - " + this.user.userName
+    );
     this._productService
       .addToGroupPurchases(this.product.productID, this.user.id)
       .subscribe(
