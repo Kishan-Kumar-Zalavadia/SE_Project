@@ -74,3 +74,81 @@ p a {
 .button:hover {
   background-color: #0056b3;
 }
+
+
+// * Popup Styles
+
+.popup {
+  .popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .popup-content {
+      background-color: #2a2a2a;
+      width: 500px;
+      padding: 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      form {
+        .form-group {
+          margin-bottom: 15px;
+
+          label {
+            color: white;
+            margin-bottom: 5px;
+            display: block;
+          }
+
+          input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+          }
+        }
+
+        button[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+
+      button {
+        background-color: #ccc;
+        color: #333;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #999;
+        }
+      }
+    }}}

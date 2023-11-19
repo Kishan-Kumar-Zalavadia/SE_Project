@@ -25,4 +25,38 @@ export class ProfileComponent {
   ngOnInit(): void {
     this.user = this._userService.getUser();
   }
+
+  // --------------------------------------------------------------------------------------------------------------------------------
+  // * Edit User
+
+  editedUser = new User();
+  showAdminPopup: boolean = false;
+
+  editUser(user: User) {
+    this.editedUser = { ...user };
+    this.openAdminPopup();
+  }
+
+  updateUser(updatedUser: User) {
+    this._userService.updateUserDetails(updatedUser).subscribe(
+      (response) => {
+        console.log("User updated successfully:", response);
+        this._userService.setUser(updatedUser);
+        this.user = this._userService.getUser();
+      },
+      (error) => {
+        console.error("Error updating user:", error);
+      }
+    );
+    this.closeAdminPopup();
+  }
+
+  openAdminPopup() {
+    this.showAdminPopup = true;
+  }
+
+  // Method to close the admin pop-up
+  closeAdminPopup() {
+    this.showAdminPopup = false;
+  }
 }

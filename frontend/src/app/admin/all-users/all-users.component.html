@@ -1,78 +1,3 @@
-<!-- <div>
-  <h2>All Users</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Email</th>
-      <th>Username</th>
-      <th>Actions</th>
-    </tr>
-    <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.emailId }}</td>
-      <td>{{ user.userName }}</td>
-      <td>
-        <button (click)="editUser(user)">Edit</button>
-      </td>
-    </tr>
-  </table>
-</div> -->
-
-<!-- *----------------------------------------------------------------------------------------- -->
-<!-- * Popup to edit the User -->
-<!-- 
-<div class="overlay" *ngIf="showAdminPopup"></div>
-<div class="popup" *ngIf="showAdminPopup">
-  <div class="popup-container">
-    <div class="popup-content">
-      <h2>Admin Popup Content</h2>
-      
-      <form (submit)="updateUser(editedUser)">
-        <div class="form-group">
-          <label for="id">ID:</label>
-          <input type="number" id="id" [(ngModel)]="editedUser.id" name="id" required>
-        </div>
-
-        <div class="form-group">
-          <label for="userName">User Name:</label>
-          <input type="text" id="userName" [(ngModel)]="editedUser.userName" name="userName" required>
-        </div>
-
-        <div class="form-group">
-          <label for="emailId">Email ID:</label>
-          <input type="email" id="emailId" [(ngModel)]="editedUser.emailId" name="emailId" required>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" [(ngModel)]="editedUser.password" name="password" required>
-        </div>
-
-        <div class="form-group">
-          <label for="profileLevel">Profile Level:</label>
-          <input type="text" id="profileLevel" [(ngModel)]="editedUser.profileLevel" name="profileLevel" required>
-        </div>
-
-        <div class="form-group">
-          <label for="address">Address:</label>
-          <input type="text" id="address" [(ngModel)]="editedUser.address" name="address" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" [(ngModel)]="editedUser.phone" name="phone" required>
-        </div>
-
-        <button type="submit">Submit</button>
-      </form>
-
-      <button (click)="closeAdminPopup()">Close</button>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- all-users.component.html -->
 <div class="main-container">
   <div class="all-users">
     <h2>All Users</h2>
@@ -82,7 +7,6 @@
         <th>Email</th>
         <th>Username</th>
         <th>Level</th>
-        <!-- Add other fields as needed -->
         <th>Actions</th>
       </tr>
       <tr *ngFor="let user of users">
@@ -90,7 +14,6 @@
         <td>{{ user.emailId }}</td>
         <td>{{ user.userName }}</td>
         <td>{{ user.profileLevel }}</td>
-        <!-- Add other fields as needed -->
         <td>
           <button (click)="editUser(user)">Edit</button>
         </td>
@@ -103,7 +26,7 @@
   <div class="popup" *ngIf="showAdminPopup">
     <div class="popup-container">
       <div class="popup-content">
-        <h2>Admin Popup Content</h2>
+        <h2>Edit User Profile</h2>
         
         <!-- Admin Form -->
         <form class="admin-form" (submit)="updateUser(editedUser)">

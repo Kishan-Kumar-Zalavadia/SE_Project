@@ -14,4 +14,58 @@
       <p>{{ user.profileLevel }}</p>
     </div>
   </div>
+  <button (click)="editUser(user)">Edit</button>
+
+
+  <!-- Popup to edit the User -->
+  <div class="overlay" *ngIf="showAdminPopup"></div>
+  <div class="popup" *ngIf="showAdminPopup">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h2>Edit User Profile</h2>
+        
+        <!-- Admin Form -->
+        <form class="admin-form" (submit)="updateUser(editedUser)">
+
+          <!-- UserName Input -->
+          <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" [(ngModel)]="editedUser.userName" name="userName" required>
+          </div>
+
+          <!-- EmailId Input -->
+          <div class="form-group">
+            <label for="emailId">Email ID:</label>
+            <input type="email" id="emailId" [(ngModel)]="editedUser.emailId" name="emailId" required>
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="editedUser.password" name="password" required>
+          </div>
+
+          <!-- Address Input -->
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" [(ngModel)]="editedUser.address" name="address" required>
+          </div>
+
+          <!-- Phone Input -->
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" [(ngModel)]="editedUser.phone" name="phone" required>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit">Submit</button>
+        </form>
+
+        <!-- Close Button -->
+        <button (click)="closeAdminPopup()">Close</button>
+      </div>
+    </div>
+  </div>
+
 </div>
+ 
