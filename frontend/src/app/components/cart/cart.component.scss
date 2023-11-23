@@ -1,7 +1,7 @@
 /* product-list.component.css */
 .main-container {
-    min-height: 100vh;
-  background-image: url(../../assets/bg1.avif);
+  min-height: 100vh;
+  background-image: url("../../../assets/bg1.avif");
   background-size: cover;
   padding: 1rem 5rem;
 }
@@ -15,7 +15,6 @@
   background-color: #2a2a2a;
   transition: transform 0.2s;
 }
-
 
 .product-card h2 {
   font-size: 1.5rem;
@@ -49,12 +48,12 @@
   background-color: #0056b3;
 }
 
-h1{
+h1 {
   color: white;
 }
 
 /* Styling for product image */
 .product-card img {
-  max-width: 100px; 
+  max-width: 100px;
   margin-right: 10px;
 }
